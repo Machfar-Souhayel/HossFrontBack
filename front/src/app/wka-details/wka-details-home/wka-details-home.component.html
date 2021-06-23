@@ -1,0 +1,4 @@
+<section class="details-home">
+    <app-wka-map [dataSent] = "filteredData"></app-wka-map>
+    <app-wka-filter (sendDataToMap) = "getWkaArray($event)"></app-wka-filter>
+</section>

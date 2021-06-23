@@ -1,0 +1,31 @@
+<!--   Bulma styling  Filter  -->
+<div class="container is-widescreen">
+
+    <div class="field">
+        <label class="label">von:</label>
+        <div class="control">
+        <input class="input" type="date" [(ngModel)]="dateVon" placeholder="von:">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">bis:</label>
+        <div class="control">
+            <input class="input" type="date" [(ngModel)]="dateBis" placeholder="bis:">
+        </div>
+    </div>
+    <div class="field">
+        <label class="checkbox">
+        <input type="checkbox" name="ch1" checked (click)="isChecked($event)">
+        Inbetriebn
+        </label>
+    </div>
+    <div class="field">
+        <label class="checkbox">
+            <input type="checkbox" name="ch2" (click)="isChecked($event)">
+            Genehmigt
+        </label>
+    </div>
+    <button [disabled]="!Inbetriebn && !Genehmigt" class="button" (click)="updateData()">filter</button>
+        
+</div>

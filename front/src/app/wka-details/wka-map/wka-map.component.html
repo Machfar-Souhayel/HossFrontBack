@@ -1,0 +1,8 @@
+<section class="map" (dblclick)="fillMarkersTableWithData()">
+    <google-map width="800">
+        <map-marker 
+          *ngFor="let marker of markers" 
+          [position]="marker.position" >
+        </map-marker>
+    </google-map>
+</section>
